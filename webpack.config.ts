@@ -47,7 +47,13 @@ const config: Configuration = {
     port: 3000
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      "@styles": path.resolve(__dirname, 'src/styles'),
+      "@components": path.resolve(__dirname, 'src/components'),
+      "@context": path.resolve(__dirname, 'src/context'),
+      "@hooks": path.resolve(__dirname, 'src/hooks')
+    }
   },
   devtool: "inline-source-map",
   output: {
