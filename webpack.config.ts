@@ -26,6 +26,10 @@ const config: Configuration = {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|webp|jpe?g)$/i,
+        use: ['file-loader'],
+      },
     ],
   },
   plugins: [
@@ -46,12 +50,14 @@ const config: Configuration = {
       '@components': path.resolve(__dirname, 'src/components'),
       '@context': path.resolve(__dirname, 'src/context'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@public': path.resolve(__dirname, 'public'),
     },
   },
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'budle.js',
+    publicPath: '/',
   },
 };
 

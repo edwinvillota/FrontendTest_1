@@ -14,10 +14,11 @@
     "jsx": "react",
     "baseUrl": "./src",
     "paths": {
-      "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"],
-      "@context/*": ["context/*"],
-      "@hooks/*": ["hooks/*"],
+      "@styles": ["styles/*"],
+      "@components": ["components/*"],
+      "@context": ["context/*"],
+      "@hooks": ["hooks/*"],
+      "@public": ["./public/*"]
     }
   },
   "include": ["src"],

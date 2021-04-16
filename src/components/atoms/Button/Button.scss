@@ -1,0 +1,32 @@
+.Button {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background 0.2s linear;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  // Size Variants
+
+  &.Small {
+    padding: 5px;
+    font-size: 12px;
+  }
+  &.Medium {
+    padding: 10px;
+    font-size: 16px;
+  }
+  &.Big {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  // Rounded
+
+  &.rounded {
+    border-radius: 50px;
+  }
+}

@@ -1,0 +1,41 @@
+@import 'styles/variables.scss';
+
+.UserProfile {
+  display: flex;
+
+  > .user-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > .user-info-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    > .profile-button {
+      margin-left: auto;
+
+      > .button-label {
+        color: $color_darkblue;
+      }
+
+      > .profile-button-icon {
+        margin-left: 10px;
+        color: $color_darkblue;
+      }
+    }
+  }
+
+  > .user-picture-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+    > .user-profile-picture {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

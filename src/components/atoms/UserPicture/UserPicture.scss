@@ -1,0 +1,11 @@
+.UserPicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  overflow: hidden;
+
+  > .user-img {
+    object-fit: cover;
+  }
+}
