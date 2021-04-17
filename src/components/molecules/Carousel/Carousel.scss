@@ -1,0 +1,32 @@
+@import 'styles/variables.scss';
+
+.Carousel {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+
+  > .button {
+    padding: 10px;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+
+    &.hide {
+      transform: scale(0);
+    }
+
+    > svg {
+      font-size: 30px;
+      color: $color-green;
+    }
+  }
+
+  > .carousel-viewport {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 20px;
+    scroll-behavior: smooth;
+  }
+}

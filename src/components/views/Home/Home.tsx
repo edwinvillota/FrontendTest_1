@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ProductCtx } from 'context';
-import { ProductCard } from 'components/molecules';
+import { ProductCard, Carousel } from 'components/molecules';
 
 import './Home.scss';
 
@@ -10,11 +10,11 @@ const Home: React.FC = () => {
   return (
     <div className="Home">
       <h1>Home</h1>
-      <div className="products-list">
+      <Carousel className="home-carousel" viewportClass="home-carousel-viewport" stepLength={210}>
         {products?.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </div>
+      </Carousel>
     </div>
   );
 };

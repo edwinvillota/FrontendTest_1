@@ -1,9 +1,14 @@
 .Home {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 70px;
 
-  > .products-list {
+  > .home-carousel {
     display: flex;
-    height: 500px;
+
+    > .carousel-viewport {
+      height: 400px;
+    }
   }
 }
