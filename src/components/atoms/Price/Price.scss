@@ -1,0 +1,27 @@
+@import 'styles/variables.scss';
+
+.Price {
+  display: flex;
+
+  > .symbol,
+  .value {
+    font-weight: bolder;
+    color: $color-green;
+    font-size: 1.2em;
+  }
+
+  > .symbol {
+    color: $color-green;
+  }
+
+  > .value {
+    color: black;
+  }
+
+  > .units {
+    margin-top: auto;
+    color: $color-grey;
+    font-size: 0.6em;
+    margin-bottom: 3px;
+  }
+}

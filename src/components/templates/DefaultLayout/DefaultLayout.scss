@@ -1,6 +1,7 @@
 .DefaultLayout {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
   > .view__wrapper {
     display: flex;

@@ -5,7 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve"
+    "start": "sh ./scripts/start.sh"
   },
   "repository": {
     "type": "git",

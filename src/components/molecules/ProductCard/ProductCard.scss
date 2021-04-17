@@ -1,0 +1,122 @@
+@import 'styles/variables.scss';
+
+.ProductCard {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 310px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+  transition: height 0.2s linear 0.2s;
+  cursor: pointer;
+  position: relative;
+  margin-right: 20px;
+
+  &:hover {
+    transition: height 0.2s linear 0s;
+    height: 340px;
+
+    > .add-cart-button {
+      transition: all 0.2s ease 0.2s;
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  > .card-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+    border-bottom: solid 1px #ccc;
+    padding: 20px 10px;
+    position: relative;
+
+    > .card-image {
+      position: absolute;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    > .stamp-bar {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin-left: auto;
+
+      > .Stamp {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  > .card-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    > .logo {
+      color: $color-green;
+      font-size: 14px;
+    }
+
+    > .content {
+      display: flex;
+      align-items: center;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 0 5px;
+      background-color: $color-green;
+      color: white;
+      border-radius: 50px;
+    }
+  }
+
+  > .card-title-wrapper {
+    display: flex;
+    min-height: 35px;
+
+    > .card-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: bolder;
+
+      @supports (-webkit-line-clamp: 2) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  > .card-price-wrapper {
+    display: flex;
+    margin: 5px 0 10px;
+
+    > .card-price {
+      font-size: 20px;
+    }
+  }
+
+  > .add-cart-button {
+    position: absolute;
+    background-color: $color-green;
+    color: white;
+    justify-content: center;
+    transition: all 0.2s ease;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.2s ease 0s;
+    pointer-events: none;
+  }
+}

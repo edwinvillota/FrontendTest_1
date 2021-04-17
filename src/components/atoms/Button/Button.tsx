@@ -10,11 +10,24 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   sizeVariant?: 'Small' | 'Medium' | 'Big';
   icon?: React.ReactNode;
   rounded?: boolean;
+  disabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ className, label, sizeVariant = 'Medium', icon, rounded, ...props }) => {
+const Button: React.FC<ButtonProps> = ({
+  className,
+  label,
+  sizeVariant = 'Medium',
+  icon,
+  rounded,
+  disabled,
+  ...props
+}) => {
   return (
-    <button className={classnames('Button', className, { [sizeVariant]: sizeVariant, rounded })} {...props}>
+    <button
+      className={classnames('Button', className, { [sizeVariant]: sizeVariant, rounded, disabled })}
+      disabled={disabled}
+      {...props}
+    >
       <span className="button-label">{label}</span>
       {icon}
     </button>
