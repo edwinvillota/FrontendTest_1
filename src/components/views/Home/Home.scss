@@ -1,0 +1,14 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 70px;
+
+  > .home-carousel {
+    display: flex;
+
+    > .carousel-viewport {
+      height: 400px;
+    }
+  }
+}

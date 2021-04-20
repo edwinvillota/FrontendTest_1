@@ -1,0 +1,121 @@
+@import 'styles/variables.scss';
+
+.CartItem {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 60px;
+  align-items: center;
+
+  > .item-wrapper {
+    display: flex;
+
+    > .image-wrapper {
+      display: flex;
+      height: 150px;
+      width: 150px;
+      overflow: hidden;
+
+      > .image {
+        width: 120px;
+        object-fit: cover;
+      }
+    }
+
+    > .info-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      > .info-title {
+        font-weight: bolder;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom: 5px;
+      }
+
+      > .info-content {
+        color: $color-grey;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      > .logo {
+        color: $color-green;
+      }
+    }
+  }
+
+  > .amount-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    > .amount-button {
+      border: solid 2px $color-green;
+
+      &:disabled {
+        border-color: $color-grey;
+
+        > svg {
+          color: $color-grey;
+        }
+
+        &:hover {
+          background-color: transparent;
+
+          > svg {
+            color: $color-grey;
+          }
+        }
+      }
+
+      > svg {
+        color: $color-green;
+      }
+
+      &:hover {
+        background-color: $color-green;
+
+        > svg {
+          color: white;
+        }
+      }
+    }
+
+    > .amount {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      margin: 0 20px;
+      font-weight: bolder;
+    }
+  }
+
+  > .price-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > .Price {
+      font-size: 20px;
+    }
+  }
+
+  > .delete-wrapper {
+    display: flex;
+    align-items: center;
+
+    > .delete-button {
+      > svg {
+        transition: all 0.2s linear;
+        color: $color-grey;
+      }
+
+      &:hover {
+        > svg {
+          color: $color_red;
+        }
+      }
+    }
+  }
+}

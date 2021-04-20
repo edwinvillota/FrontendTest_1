@@ -1,0 +1,58 @@
+@import 'styles/variables.scss';
+
+.Stamp {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  position: relative;
+
+  &:hover {
+    > .tooltip {
+      transform: scale(1);
+    }
+  }
+
+  > img {
+    object-fit: cover;
+    width: 25px;
+  }
+
+  > .tooltip {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px 5px 5px;
+    border-radius: 5px 5px 5px 0;
+    background-color: $color_darkgreen;
+    position: absolute;
+    left: 120%;
+    bottom: 10px;
+    z-index: 10;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+
+    > .tooltip-title {
+      font-size: 12px;
+      font-weight: bold;
+      color: $color_yellow;
+    }
+
+    > .tooltip-text {
+      font-size: 14px;
+      color: white;
+      text-transform: capitalize;
+    }
+
+    &::after {
+      content: '';
+      display: flex;
+      position: absolute;
+      width: 4px;
+      height: 7px;
+      background-color: $color_darkgreen;
+      bottom: 0;
+      right: calc(100% - 1px);
+      z-index: -1;
+      clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    }
+  }
+}
